@@ -61,7 +61,6 @@ class Elementor_Sitewide_Meta {
      * Initialize default meta fields
      */
     private function init_meta_fields() {
-        // Force update default fields on each initialization
         $default_fields = [
             'brand_name' => [
                 'id' => 'brand_name',
@@ -107,7 +106,17 @@ class Elementor_Sitewide_Meta {
             ]
         ];
         
-        // Always update the option with default fields
+        // Get saved fields
+        $saved_fields = get_option('esm_meta_fields', []);
+        
+        // Merge saved values with default fields
+        foreach ($default_fields as $key => $field) {
+            if (isset($saved_fields[$key]['value'])) {
+                $default_fields[$key]['value'] = $saved_fields[$key]['value'];
+            }
+        }
+        
+        // Update option and class property
         update_option('esm_meta_fields', $default_fields);
         $this->meta_fields = $default_fields;
     }
@@ -116,12 +125,10 @@ class Elementor_Sitewide_Meta {
      * Plugin activation
      */
     public function activate() {
-        // Initialize meta fields on activation
-        $this->init_meta_fields();
-        
-        // Delete any old options to ensure clean state
-        delete_option('esm_meta_fields');
-        $this->init_meta_fields();
+        // Initialize meta fields on activation only if they don't exist
+        if (!get_option('esm_meta_fields')) {
+            $this->init_meta_fields();
+        }
     }
     
     /**
