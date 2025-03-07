@@ -76,33 +76,47 @@ class Elementor_Sitewide_Meta {
                 'value' => '',
                 'description' => 'Your blog niche or category (text)'
             ],
+            'about_us' => [
+                'id' => 'about_us',
+                'label' => 'About Us',
+                'type' => 'textarea',
+                'value' => '',
+                'description' => 'About your blog or company (textarea)'
+            ],
+            'legal_info' => [
+                'id' => 'legal_info',
+                'label' => 'Legal Information',
+                'type' => 'textarea',
+                'value' => '',
+                'description' => 'Legal disclaimers and information (textarea)'
+            ],
             'facebook_url' => [
                 'id' => 'facebook_url',
                 'label' => 'Facebook URL',
-                'type' => 'url',
+                'type' => 'text',
                 'value' => '',
-                'description' => 'Your Facebook page URL (url)'
+                'description' => 'Your Facebook page URL (text)'
             ],
             'twitter_url' => [
                 'id' => 'twitter_url',
                 'label' => 'Twitter (X) URL',
-                'type' => 'url',
+                'type' => 'text',
                 'value' => '',
-                'description' => 'Your Twitter/X profile URL (url)'
+                'description' => 'Your Twitter/X profile URL (text)'
             ],
             'youtube_url' => [
                 'id' => 'youtube_url',
                 'label' => 'YouTube URL',
-                'type' => 'url',
+                'type' => 'text',
                 'value' => '',
-                'description' => 'Your YouTube channel URL (url)'
+                'description' => 'Your YouTube channel URL (text)'
             ],
             'instagram_url' => [
                 'id' => 'instagram_url',
                 'label' => 'Instagram URL',
-                'type' => 'url',
+                'type' => 'text',
                 'value' => '',
-                'description' => 'Your Instagram profile URL (url)'
+                'description' => 'Your Instagram profile URL (text)'
             ]
         ];
         
