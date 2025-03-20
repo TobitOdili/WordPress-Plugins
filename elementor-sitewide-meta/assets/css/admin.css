@@ -1,0 +1,27 @@
+.esm-tab-nav {
+    margin-bottom: 20px;
+}
+
+.esm-tab-content {
+    display: none;
+}
+
+.esm-fields-container {
+    max-width: 800px;
+}
+
+.esm-field-row {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.esm-field-row h3 {
+    margin-top: 0;
+}
+
+.esm-field-row textarea {
+    min-height: 200px;
+}
